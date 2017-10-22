@@ -1,0 +1,22 @@
+<ion-content no-padding>
+  <div class="login-logo-container">
+    <div text-center>TMDSAS</div>
+  </div>
+  <div class="login-form-container">
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="text" required name="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Password</ion-label>
+          <ion-input type="password" required name="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <button ion-button type="submit" block large [disabled]="!loginForm.form.valid">Login</button>
+        </ion-item>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>
